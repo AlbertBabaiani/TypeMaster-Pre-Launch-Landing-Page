@@ -67,15 +67,14 @@ h1 {
 }
 
 .pre-order-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 3.2rem;
 }
 .pre-order-wrapper button {
   background: var(--primary);
   color: #fff;
+  justify-self: start;
 }
 .pre-order-wrapper span {
   font-size: 1.6rem;
@@ -123,12 +122,16 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2rem;
+  -o-object-position: left;
+     object-position: left;
 }
 .img-box.img-1 {
   overflow: hidden;
   position: relative;
 }
 .img-box.img-1 img {
+  -o-object-position: right;
+     object-position: right;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -221,4 +224,91 @@ footer p {
 }
 footer p span {
   font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --px: 4rem;
+  }
+  .btn {
+    padding: 1.6rem 2.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+  }
+  header {
+    padding-top: 4rem;
+    margin-bottom: 6.2rem;
+  }
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-left: var(--px);
+    margin-bottom: 4rem;
+  }
+  .hero p {
+    margin-bottom: 4rem;
+    max-width: 33.9rem;
+  }
+  .hero img {
+    -o-object-position: left;
+       object-position: left;
+  }
+  .hero-content {
+    padding: 0;
+  }
+  h1 {
+    max-width: 34rem;
+    margin-bottom: 3.4rem;
+  }
+  .pre-order-wrapper {
+    gap: 3.7rem;
+  }
+  .hero-img-wrapper {
+    min-height: unset;
+    max-height: unset;
+    margin: 0;
+    height: 42.5rem;
+    width: 32.1rem;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+  }
+  .keyboard-showcase {
+    padding-inline: var(--px);
+  }
+  .keyboard-images {
+    padding: 0;
+    gap: 3.1rem;
+  }
+  .img-box {
+    height: 32rem;
+    min-height: unset;
+    max-height: unset;
+  }
+  .keyboard-images img,
+  .img-1 {
+    border-radius: 2.5rem;
+  }
+  .keyboard-content {
+    margin-top: 7.2rem;
+    padding: 0;
+    display: grid;
+    gap: 8rem;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+  .specifications {
+    grid-template-columns: 1fr 1fr;
+    gap: 7.2rem;
+    margin-bottom: 14.2rem;
+  }
+  .card {
+    align-items: start;
+    text-align: start;
+  }
+  footer {
+    padding-bottom: 4.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

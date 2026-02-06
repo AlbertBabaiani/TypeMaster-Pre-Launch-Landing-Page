@@ -84,15 +84,15 @@ h1 {
 }
 
 .pre-order-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+
+  gap: 3.2rem;
 
   button {
     background: var(--primary);
     color: #fff;
+    justify-self: start;
   }
 
   span {
@@ -150,6 +150,8 @@ h1 {
     object-fit: cover;
 
     border-radius: 2rem;
+
+    object-position: left;
   }
 
   &.img-1 {
@@ -157,6 +159,7 @@ h1 {
     position: relative;
 
     img {
+      object-position: right;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -280,3 +283,128 @@ footer {
 }
 
 // Footer End
+
+// Tablet View
+@media (min-width: 768px) {
+  :root {
+    --px: 4rem;
+  }
+
+  // Utilities Start
+
+  .btn {
+    padding: 1.6rem 2.7rem;
+    border: none;
+    border-radius: 0.8rem;
+
+    font-size: 1.6rem;
+  }
+
+  // Utilities End
+
+  header {
+    padding-top: 4rem;
+    margin-bottom: 6.2rem;
+  }
+
+  //   Hero Start
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    padding-left: var(--px);
+    margin-bottom: 4rem;
+
+    p {
+      margin-bottom: 4rem;
+      max-width: 33.9rem;
+    }
+
+    img {
+      object-position: left;
+    }
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  h1 {
+    max-width: 34rem;
+    margin-bottom: 3.4rem;
+  }
+
+  .pre-order-wrapper {
+    gap: 3.7rem;
+  }
+
+  .hero-img-wrapper {
+    min-height: unset;
+    max-height: unset;
+
+    margin: 0;
+
+    height: 42.5rem;
+    width: 32.1rem;
+
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+  }
+  //   Hero End
+
+  //   Showcase Start
+
+  .keyboard-showcase {
+    padding-inline: var(--px);
+  }
+
+  .keyboard-images {
+    padding: 0;
+    gap: 3.1rem;
+  }
+
+  .img-box {
+    height: 32rem;
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .keyboard-images img,
+  .img-1 {
+    border-radius: 2.5rem;
+  }
+
+  .keyboard-content {
+    margin-top: 7.2rem;
+
+    padding: 0;
+    display: grid;
+    gap: 8rem;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+
+  //   Showcase End
+
+  //   Specifications Start
+
+  .specifications {
+    grid-template-columns: 1fr 1fr;
+    gap: 7.2rem;
+    margin-bottom: 14.2rem;
+  }
+
+  .card {
+    align-items: start;
+    text-align: start;
+  }
+
+  //   Specifications End
+
+  footer {
+    padding-bottom: 4.3rem;
+  }
+}
