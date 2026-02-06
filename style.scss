@@ -1,0 +1,282 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Barlow", sans-serif;
+}
+
+:root {
+  --primary: #f16718;
+  --primary-hover: #f16718;
+
+  --secondary: #7b8bad;
+  --secondary-hover: #e8eff2;
+
+  --black: #162542;
+  --text-color: var(--black);
+
+  --px: 2.4rem;
+}
+
+body {
+  color: var(--text-color);
+}
+
+// Utilities Start
+
+.btn {
+  padding: 1.1rem 1.35rem;
+  border: none;
+  border-radius: 0.8rem;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.63;
+  color: var(--text-color);
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+// Utilities End
+
+header {
+  padding: 2.3rem var(--px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 7rem;
+}
+
+// Hero Start
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1;
+
+  margin-bottom: 3.2rem;
+
+  text-transform: uppercase;
+}
+
+.hero {
+  margin-bottom: 2.4rem;
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    color: var(--secondary);
+
+    margin-bottom: 3.2rem;
+  }
+}
+
+.hero-content {
+  padding-inline: var(--px);
+}
+
+.pre-order-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  button {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.63;
+    color: var(--secondary);
+    text-align: center;
+  }
+}
+
+.hero-img-wrapper {
+  margin-left: var(--px);
+
+  height: 100%;
+  max-height: 36rem;
+
+  margin-top: 6.4rem;
+  overflow: hidden;
+
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Hero End
+
+// Keyboard Showcase Start
+
+.keyboard-showcase {
+  margin-bottom: 11.1rem;
+}
+
+.keyboard-images {
+  padding-right: var(--px);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.4rem;
+}
+
+.img-box {
+  height: 100%;
+
+  min-height: 19rem;
+  max-height: 20rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 2rem;
+  }
+
+  &.img-1 {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+      background: var(--primary);
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+  }
+}
+
+.keyboard-content {
+  margin-top: 7.5rem;
+  text-align: center;
+  padding-inline: var(--px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.13;
+
+    text-transform: uppercase;
+    max-width: 25.5rem;
+
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    color: var(--secondary);
+  }
+}
+
+// Keyboard Showcase End
+
+// Specifications Start
+
+.specifications {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6.4rem;
+  padding-inline: var(--px);
+
+  margin-bottom: 9.6rem;
+}
+
+.icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 1.6rem;
+  background: var(--primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.17;
+
+    margin-block: 4.8rem 2.4rem;
+
+    max-width: 20rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    color: var(--secondary);
+  }
+}
+
+// Specifications End
+
+// Footer Start
+
+footer {
+  text-align: center;
+  padding: 0 var(--px) 5rem;
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    color: var(--secondary);
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+      font-weight: normal;
+    }
+  }
+}
+
+// Footer End
