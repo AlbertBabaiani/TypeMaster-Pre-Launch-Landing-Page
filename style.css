@@ -11,7 +11,7 @@ html {
 
 :root {
   --primary: #f16718;
-  --primary-hover: #f16718;
+  --primary-hover: #ff9b62;
   --secondary: #7b8bad;
   --secondary-hover: #e8eff2;
   --black: #162542;
@@ -31,8 +31,14 @@ body {
   font-weight: 700;
   line-height: 1.63;
   color: var(--text-color);
+  background: var(--secondary-hover);
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: var(--black);
+  color: #fff;
 }
 
 header {
@@ -76,12 +82,16 @@ h1 {
   color: #fff;
   justify-self: start;
 }
+.pre-order-wrapper button:hover {
+  background: var(--primary-hover);
+}
 .pre-order-wrapper span {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.63;
   color: var(--secondary);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .hero-img-wrapper {
@@ -271,12 +281,15 @@ footer p span {
     max-height: unset;
     margin: 0;
     height: 42.5rem;
-    width: 32.1rem;
+    min-width: 32.1rem;
     border-top-left-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem;
   }
   .keyboard-showcase {
     padding-inline: var(--px);
+  }
+  .keyboard-showcase h2 {
+    margin: 0;
   }
   .keyboard-images {
     padding: 0;
@@ -310,5 +323,64 @@ footer p span {
   }
   footer {
     padding-bottom: 4.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --px: 16.5rem;
+  }
+  header {
+    padding-top: 5.5rem;
+    margin-bottom: 8.3rem;
+  }
+  main {
+    padding-inline: var(--px);
+  }
+  .hero {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  .hero p {
+    max-width: 44.5rem;
+  }
+  .pre-order-wrapper {
+    gap: 4rem;
+  }
+  .hero-img-wrapper {
+    border-radius: 2.5rem;
+  }
+  .keyboard-showcase {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12.5rem;
+    padding: 0;
+    margin-bottom: 16.8rem;
+  }
+  .keyboard-content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 2.7rem;
+  }
+  .keyboard-content p {
+    max-width: 25.5rem;
+  }
+  .keyboard-images {
+    grid-template-columns: 25rem auto;
+  }
+  .img-box {
+    height: 48rem;
+  }
+  .specifications {
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 12.8rem;
+  }
+  footer {
+    padding-bottom: 3.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

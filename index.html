@@ -39,7 +39,18 @@
         </div>
 
         <div class="hero-img-wrapper">
-          <img src="./assets/mobile/image-keyboard.jpg" alt="Hero Image" />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="./assets/tablet/image-keyboard.jpg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/desktop/image-keyboard.jpg"
+            />
+
+            <img src="./assets/mobile/image-keyboard.jpg" alt="Hero Image" />
+          </picture>
         </div>
       </section>
 
@@ -47,6 +58,10 @@
         <div class="keyboard-images">
           <div class="img-box img-1">
             <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="./assets/desktop/image-phone-and-keyboard.jpg"
+              />
               <source
                 media="(min-width: 768px)"
                 srcset="./assets/tablet/image-phone-and-keyboard.jpg"
@@ -61,9 +76,14 @@
           <div class="img-box">
             <picture>
               <source
+                media="(min-width: 1440px)"
+                srcset="./assets/desktop/image-glass-and-keyboard.jpg"
+              />
+              <source
                 media="(min-width: 768px)"
                 srcset="./assets/tablet/image-glass-and-keyboard.jpg"
               />
+
               <img
                 src="./assets/mobile/image-glass-and-keyboard.jpg"
                 alt="Keyboard Image 2"
