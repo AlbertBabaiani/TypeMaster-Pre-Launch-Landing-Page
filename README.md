@@ -10,7 +10,7 @@
   <br />
   <br />
 
-  <a href="https://albertbabaiani.github.io/TypeMaster-Pre-Launch-Landing-Page/">
+  <a href="https://albertbabaiani.github.io/TypeMaster-Pre-Launch-Landing-Page/s">
     <img src="https://img.shields.io/badge/View_Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="View Live Demo" />
   </a>
   
