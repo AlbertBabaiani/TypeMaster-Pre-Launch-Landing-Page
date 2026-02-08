@@ -41,12 +41,19 @@ body {
   background: var(--secondary-hover);
   text-transform: uppercase;
 
+  text-decoration: none;
+
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
     background: var(--black);
     color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
   }
 }
 
@@ -82,6 +89,8 @@ h1 {
     line-height: 1.63;
     color: var(--secondary);
 
+    max-width: 40rem;
+
     margin-bottom: 3.2rem;
   }
 }
@@ -96,7 +105,7 @@ h1 {
 
   gap: 3.2rem;
 
-  button {
+  a {
     background: var(--primary);
     color: #fff;
     justify-self: start;
@@ -216,6 +225,8 @@ h1 {
     font-weight: 500;
     line-height: 1.63;
     color: var(--secondary);
+
+    max-width: 38rem;
   }
 }
 
@@ -265,6 +276,8 @@ h1 {
     font-weight: 500;
     line-height: 1.63;
     color: var(--secondary);
+
+    max-width: 38rem;
   }
 }
 
@@ -325,7 +338,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 
     padding-left: var(--px);
     margin-bottom: 4rem;
@@ -341,6 +354,7 @@ footer {
   }
 
   .hero-content {
+    width: 55%;
     padding: 0;
   }
 
@@ -360,7 +374,7 @@ footer {
     margin: 0;
 
     height: 42.5rem;
-    min-width: 32.1rem;
+    width: 45%;
 
     border-top-left-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem;
@@ -399,9 +413,13 @@ footer {
 
     padding: 0;
     display: grid;
-    gap: 8rem;
+    gap: 3.1rem;
     grid-template-columns: 1fr 2fr;
     text-align: left;
+
+    p {
+      max-width: 56rem;
+    }
   }
 
   //   Showcase End
@@ -417,6 +435,10 @@ footer {
   .card {
     align-items: start;
     text-align: start;
+
+    p {
+      max-width: 42rem;
+    }
   }
 
   //   Specifications End
@@ -437,14 +459,14 @@ footer {
     margin-bottom: 8.3rem;
   }
 
-  main {
-    padding-inline: var(--px);
-  }
-
   //   Hero Start
   .hero {
-    padding: 0;
+    padding: 0 var(--px);
     margin-bottom: 3rem;
+
+    background-image: url(./assets/shared/pattern-square.svg);
+    background-repeat: no-repeat;
+    background-position: top left calc(100% + 12rem);
 
     p {
       max-width: 44.5rem;
@@ -457,6 +479,11 @@ footer {
 
   .hero-img-wrapper {
     border-radius: 2.5rem;
+    width: 50%;
+  }
+
+  .hero-content {
+    width: 50%;
   }
 
   //   Hero End
@@ -469,9 +496,13 @@ footer {
     align-items: center;
 
     gap: 12.5rem;
-    padding: 0;
+    padding: 0 var(--px);
 
     margin-bottom: 16.8rem;
+
+    background-image: url(./assets/shared/pattern-square.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right calc(100% + 12rem);
   }
 
   .keyboard-content {
@@ -499,9 +530,9 @@ footer {
 
   // Specifications Start
   .specifications {
-    padding: 0;
+    padding: 0 var(--px);
     grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    gap: 6rem;
     margin-bottom: 12.8rem;
   }
 

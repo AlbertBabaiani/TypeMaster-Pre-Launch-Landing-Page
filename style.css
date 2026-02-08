@@ -33,12 +33,17 @@ body {
   color: var(--text-color);
   background: var(--secondary-hover);
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s;
 }
 .btn:hover {
   background: var(--black);
   color: #fff;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 header {
@@ -65,6 +70,7 @@ h1 {
   font-weight: 500;
   line-height: 1.63;
   color: var(--secondary);
+  max-width: 40rem;
   margin-bottom: 3.2rem;
 }
 
@@ -77,12 +83,12 @@ h1 {
   align-items: center;
   gap: 3.2rem;
 }
-.pre-order-wrapper button {
+.pre-order-wrapper a {
   background: var(--primary);
   color: #fff;
   justify-self: start;
 }
-.pre-order-wrapper button:hover {
+.pre-order-wrapper a:hover {
   background: var(--primary-hover);
 }
 .pre-order-wrapper span {
@@ -177,6 +183,7 @@ h1 {
   font-weight: 500;
   line-height: 1.63;
   color: var(--secondary);
+  max-width: 38rem;
 }
 
 .specifications {
@@ -215,6 +222,7 @@ h1 {
   font-weight: 500;
   line-height: 1.63;
   color: var(--secondary);
+  max-width: 38rem;
 }
 
 footer {
@@ -254,7 +262,7 @@ footer p span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     padding-left: var(--px);
     margin-bottom: 4rem;
   }
@@ -267,6 +275,7 @@ footer p span {
        object-position: left;
   }
   .hero-content {
+    width: 55%;
     padding: 0;
   }
   h1 {
@@ -281,7 +290,7 @@ footer p span {
     max-height: unset;
     margin: 0;
     height: 42.5rem;
-    min-width: 32.1rem;
+    width: 45%;
     border-top-left-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem;
   }
@@ -308,9 +317,12 @@ footer p span {
     margin-top: 7.2rem;
     padding: 0;
     display: grid;
-    gap: 8rem;
+    gap: 3.1rem;
     grid-template-columns: 1fr 2fr;
     text-align: left;
+  }
+  .keyboard-content p {
+    max-width: 56rem;
   }
   .specifications {
     grid-template-columns: 1fr 1fr;
@@ -320,6 +332,9 @@ footer p span {
   .card {
     align-items: start;
     text-align: start;
+  }
+  .card p {
+    max-width: 42rem;
   }
   footer {
     padding-bottom: 4.3rem;
@@ -333,12 +348,12 @@ footer p span {
     padding-top: 5.5rem;
     margin-bottom: 8.3rem;
   }
-  main {
-    padding-inline: var(--px);
-  }
   .hero {
-    padding: 0;
+    padding: 0 var(--px);
     margin-bottom: 3rem;
+    background-image: url(./assets/shared/pattern-square.svg);
+    background-repeat: no-repeat;
+    background-position: top left calc(100% + 12rem);
   }
   .hero p {
     max-width: 44.5rem;
@@ -348,14 +363,21 @@ footer p span {
   }
   .hero-img-wrapper {
     border-radius: 2.5rem;
+    width: 50%;
+  }
+  .hero-content {
+    width: 50%;
   }
   .keyboard-showcase {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 12.5rem;
-    padding: 0;
+    padding: 0 var(--px);
     margin-bottom: 16.8rem;
+    background-image: url(./assets/shared/pattern-square.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right calc(100% + 12rem);
   }
   .keyboard-content {
     padding: 0;
@@ -375,9 +397,9 @@ footer p span {
     height: 48rem;
   }
   .specifications {
-    padding: 0;
+    padding: 0 var(--px);
     grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    gap: 6rem;
     margin-bottom: 12.8rem;
   }
   footer {
